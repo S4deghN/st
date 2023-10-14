@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
-static int borderpx = 2;
+static char *font = "Iosevka Fixed-14:antialias=true:autohint=true";
+static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -54,7 +54,7 @@ int allowwindowops = 0;
  * near minlatency, but it waits longer for slow updates to avoid partial draw.
  * low minlatency will tear/flicker more, as it can "detect" idle too early.
  */
-static double minlatency = 8;
+static double minlatency = 3;
 static double maxlatency = 33;
 
 /*
@@ -75,10 +75,10 @@ static unsigned int cursorthickness = 2;
  * 0: disable (render all U25XX glyphs normally from the font).
  */
 const int boxdraw = 1;
-const int boxdraw_bold = 0;
+const int boxdraw_bold = 1;
 
 /* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
-const int boxdraw_braille = 0;
+const int boxdraw_braille = 1;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -131,7 +131,7 @@ static const char *colorname[] = {
 	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#add8e6", /* 256 -> cursor */
+	"#8ec07c", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"#282828", /* 258 -> bg */
 	"#ebdbb2", /* 259 -> fg */
@@ -155,14 +155,14 @@ unsigned int background = 258;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorshape = 1;
 
 /*
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 80;
-static unsigned int rows = 24;
+static unsigned int cols = 130;
+static unsigned int rows = 38;
 
 /*
  * Default colour and shape of the mouse cursor
@@ -238,13 +238,33 @@ static MouseShortcut mshortcuts[] = {
 	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
-/* Internal keyboard shortcuts. */
-#define MODKEY Mod1Mask
-#define TERMMOD (Mod1Mask|ShiftMask)
-
 static char *openurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -o", "externalpipe", NULL };
 static char *copyurlcmd[] = { "/bin/sh", "-c", "st-urlhandler -c", "externalpipe", NULL };
 static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NULL };
+
+// /* Internal keyboard shortcuts. */
+// #define MODKEY Mod1Mask
+// #define TERMMOD (ControlMask|ShiftMask)
+
+// static Shortcut shortcuts[] = {
+//     /* mask                 keysym          function        argument */
+//     { XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
+//     { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+//     { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+//     { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+//     { TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+//     { TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+//     { TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+//     { TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
+//     { TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+//     { TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
+//     { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
+//     { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+// };
+
+/* Internal keyboard shortcuts. */
+#define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -272,8 +292,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
 	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
 	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-	{ MODKEY,		XK_s,		changealpha,	{.f = -0.05} },
-	{ MODKEY,		XK_a,		changealpha,	{.f = +0.05} },
+	{ MODKEY,		        XK_s,		    changealpha,	{.f = -0.05} },
+	{ MODKEY,		        XK_a,		    changealpha,	{.f = +0.05} },
 	{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
