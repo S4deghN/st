@@ -46,7 +46,7 @@ int allowaltscreen = 1;
 
 /* allow certain non-interactive (insecure) window operations such as:
    setting the clipboard text */
-int allowwindowops = 1;
+int allowwindowops = 0;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
@@ -111,32 +111,56 @@ float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-/* Terminal colors (16 first used in escape sequence) */
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+// 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#cc241d",
+// 	"#98971a",
+// 	"#d79921",
+// 	"#458588",
+// 	"#b16286",
+// 	"#689d6a",
+// 	"#a89984",
+// 	"#928374",
+// 	"#fb4934",
+// 	"#b8bb26",
+// 	"#fabd2f",
+// 	"#83a598",
+// 	"#d3869b",
+// 	"#8ec07c",
+// 	"#ebdbb2",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#8ec07c", /* 256 -> cursor */
+// 	"#555555", /* 257 -> rev cursor*/
+// 	"#282828", /* 258 -> bg */
+// 	"#ebdbb2", /* 259 -> fg */
+// };
+
 static const char *colorname[] = {
 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
+	"#cf6a4c",
+	"#799d6a",
+	"#ffb964",
+	"#8fbfdc",
+	"#c6b6ee",
 	"#458588",
-	"#b16286",
-	"#689d6a",
 	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	"#928374", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#cf6a4c",
+	"#799d6a",
+	"#ffb964",
+	"#8fbfdc",
+	"#c6b6ee",
+	"#458588",
+	"#e8e8d3",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#8ec07c", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#e8e8d3", /* 259 -> fg */
 };
-
 
 /*
  * Default colors (colorname index)
@@ -161,8 +185,8 @@ static unsigned int cursorshape = 1;
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 130;
-static unsigned int rows = 38;
+static unsigned int cols = 140;
+static unsigned int rows = 41;
 
 /*
  * Default colour and shape of the mouse cursor
