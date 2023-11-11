@@ -72,48 +72,48 @@ hbfindfont(XftFont *match)
 void
 hbtransform(XftGlyphFontSpec *specs, const Glyph *glyphs, size_t len, int x, int y)
 {
-	int start = 0, length = 1, gstart = 0;
-	hb_codepoint_t *codepoints = calloc((unsigned int)len, sizeof(hb_codepoint_t));
+	// int start = 0, length = 1, gstart = 0;
+	// hb_codepoint_t *codepoints = calloc((unsigned int)len, sizeof(hb_codepoint_t));
 
-	for (int idx = 1, specidx = 1; idx < len; idx++) {
-		if (glyphs[idx].mode & ATTR_WDUMMY) {
-			length += 1;
-			continue;
-		}
+	// for (int idx = 1, specidx = 1; idx < len; idx++) {
+	// 	if (glyphs[idx].mode & ATTR_WDUMMY) {
+	// 		length += 1;
+	// 		continue;
+	// 	}
 
-		if (specs[specidx].font != specs[start].font || ATTRCMP(glyphs[gstart], glyphs[idx]) || selected(x + idx, y) != selected(x + gstart, y)) {
-			hbtransformsegment(specs[start].font, glyphs, codepoints, gstart, length);
+	// 	if (specs[specidx].font != specs[start].font || ATTRCMP(glyphs[gstart], glyphs[idx]) || selected(x + idx, y) != selected(x + gstart, y)) {
+	// 		hbtransformsegment(specs[start].font, glyphs, codepoints, gstart, length);
 
-			/* Reset the sequence. */
-			length = 1;
-			start = specidx;
-			gstart = idx;
-		} else {
-			length += 1;
-		}
+	// 		/* Reset the sequence. */
+	// 		length = 1;
+	// 		start = specidx;
+	// 		gstart = idx;
+	// 	} else {
+	// 		length += 1;
+	// 	}
 
-		specidx++;
-	}
+	// 	specidx++;
+	// }
 
-	/* EOL. */
-	hbtransformsegment(specs[start].font, glyphs, codepoints, gstart, length);
+	// /* EOL. */
+	// hbtransformsegment(specs[start].font, glyphs, codepoints, gstart, length);
 
-	/* Apply the transformation to glyph specs. */
-	for (int i = 0, specidx = 0; i < len; i++) {
-		if (glyphs[i].mode & ATTR_WDUMMY)
-			continue;
-		if (glyphs[i].mode & ATTR_BOXDRAW) {
-			specidx++;
-			continue;
-		}
+	// /* Apply the transformation to glyph specs. */
+	// for (int i = 0, specidx = 0; i < len; i++) {
+	// 	if (glyphs[i].mode & ATTR_WDUMMY)
+	// 		continue;
+	// 	if (glyphs[i].mode & ATTR_BOXDRAW) {
+	// 		specidx++;
+	// 		continue;
+	// 	}
 
-		if (codepoints[i] != specs[specidx].glyph)
-			((Glyph *)glyphs)[i].mode |= ATTR_LIGA;
+	// 	if (codepoints[i] != specs[specidx].glyph)
+	// 		((Glyph *)glyphs)[i].mode |= ATTR_LIGA;
 
-		specs[specidx++].glyph = codepoints[i];
-	}
+	// 	specs[specidx++].glyph = codepoints[i];
+	// }
 
-	free(codepoints);
+	// free(codepoints);
 }
 
 void
