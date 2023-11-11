@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka Fixed-14:antialias=true:autohint=true";
+static char *font = "iosevkalyteterm-14:antialias=true:autohint=true";
 static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -111,6 +111,34 @@ float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
+// arc-green
+static const char *colorname[] = {
+    "#202424",
+    "#CF6A4C",
+    "#8F9D6A",
+    "#CDA869",
+    "#789AC0",
+    "#b16286",
+    "#68BEA2",
+    "#6B7278",
+    "#747C84",
+    "#CF6A4C",
+    "#87AF87",
+    "#CDA869",
+    "#789AC0",
+    "#d3869b",
+    "#5FAFAF",
+    "#BCBCBC",
+    [255] = 0,
+    /* more colors can be added after 255 to use with DefaultXX */
+    "#8ec07c", /* 256 -> cursor */
+    "#555555", /* 257 -> rev cursor*/
+    "#202424", /* 258 -> bg */
+    "#9aa9aa", /* 259 -> fg */
+};
+
+
+// gruvbox
 // /* Terminal colors (16 first used in escape sequence) */
 // static const char *colorname[] = {
 // 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
@@ -137,30 +165,62 @@ float alphaUnfocus;
 // 	"#ebdbb2", /* 259 -> fg */
 // };
 
-static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cf6a4c",
-	"#799d6a",
-	"#ffb964",
-	"#8fbfdc",
-	"#c6b6ee",
-	"#458588",
-	"#a89984",
-	"#928374", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cf6a4c",
-	"#799d6a",
-	"#ffb964",
-	"#8fbfdc",
-	"#c6b6ee",
-	"#458588",
-	"#e8e8d3",
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#8ec07c", /* 256 -> cursor */
-	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#e8e8d3", /* 259 -> fg */
-};
+// Solarized
+// static const char *colorname[] = {
+// 	// "#073642", /* normal colors */
+// 	// "#1D2223",
+// 	"#002b36",
+// 	// "#dc322f",
+// 	"#CB4B16",
+// 	"#859900",
+// 	"#b58900",
+// 	"#268bd2",
+// 	"#d33682",
+// 	"#2aa198",
+// 	"#839496",
+// 	"#5A696A", /* bright colors */
+// 	"#cb4b16",
+// 	"#859900",
+// 	"#b58900",
+// 	"#268bd2",
+// 	"#d33682",
+// 	"#2aa198",
+// 	"#a3b4b6",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#839496", /* 256 -> cursor */
+// 	"#000000", /* 257 -> rev cursor*/
+// 	"#002b36", /* 258 -> bg */
+// 	// "#1C2122", /* 258 -> bg */
+// 	"#839496", /* 259 -> fg */
+// };
+
+
+// jellybeans
+// static const char *colorname[] = {
+// 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#cf6a4c",
+// 	"#799d6a",
+// 	"#ffb964",
+// 	"#8fbfdc",
+// 	"#c6b6ee",
+// 	"#458588",
+// 	"#b8b8a3",
+// 	"#928374", /* hard contrast: #1d2021 / soft contrast: #32302f */
+// 	"#cf6a4c",
+// 	"#799d6a",
+// 	"#ffb964",
+// 	"#8fbfdc",
+// 	"#c6b6ee",
+// 	"#458588",
+// 	"#e8e8d3",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#8ec07c", /* 256 -> cursor */
+// 	"#555555", /* 257 -> rev cursor*/
+// 	"#282828", /* 258 -> bg */
+// 	"#e8e8d3", /* 259 -> fg */
+// };
 
 /*
  * Default colors (colorname index)
