@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "iosevkalyteterm-14:antialias=true:autohint=true";
+static char *font = "Iosevka Term-14:antialias=true:autohint=true";
 static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -46,7 +46,7 @@ int allowaltscreen = 1;
 
 /* allow certain non-interactive (insecure) window operations such as:
    setting the clipboard text */
-int allowwindowops = 0;
+int allowwindowops = 1;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
