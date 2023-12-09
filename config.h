@@ -113,7 +113,7 @@ float alphaUnfocus;
 
 // arc-green
 static const char *colorname[] = {
-    "#202424",
+    "#000000",
     "#CF6A4C",
     "#8F9D6A",
     "#CDA869",
@@ -133,7 +133,7 @@ static const char *colorname[] = {
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#555555", /* 257 -> rev cursor*/
-    "#202424", /* 258 -> bg */
+    "#000000", /* 258 -> bg */
     "#9aa9aa", /* 259 -> fg */
 };
 
