@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka Term-14:antialias=true:autohint=true";
+static char *font = "Iosevka extended-13:antialias=true:autohint=true";
 static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -133,6 +133,7 @@ static const char *colorname[] = {
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#555555", /* 257 -> rev cursor*/
+    // "#191919", /* 258 -> bg */
     "#000000", /* 258 -> bg */
     "#9aa9aa", /* 259 -> fg */
 };
