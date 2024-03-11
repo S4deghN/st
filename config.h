@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka-15:antialias=true:autohint=true";
+static char *font = "Iosevka-14:antialias=true:autohint=true";
 static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -54,8 +54,8 @@ int allowwindowops = 1;
  * near minlatency, but it waits longer for slow updates to avoid partial draw.
  * low minlatency will tear/flicker more, as it can "detect" idle too early.
  */
-static double minlatency = 3;
-static double maxlatency = 33;
+static double minlatency = 0;
+static double maxlatency = 3;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -113,7 +113,7 @@ float alphaUnfocus;
 
 // arc-green
 static const char *colorname[] = {
-    "#000000",
+    "#191919",
     "#CF6A4C",
     "#8F9D6A",
     "#CDA869",
@@ -133,95 +133,12 @@ static const char *colorname[] = {
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#555555", /* 257 -> rev cursor*/
-    "#191919", /* 258 -> bg */
+    "#1a1a1a", /* 258 -> bg */
+    // "#1E2223", /* 258 -> bg */
     // "#000000", /* 258 -> bg */
     "#9aa9aa", /* 259 -> fg */
 };
 
-
-// gruvbox
-// /* Terminal colors (16 first used in escape sequence) */
-// static const char *colorname[] = {
-// 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-// 	"#cc241d",
-// 	"#98971a",
-// 	"#d79921",
-// 	"#458588",
-// 	"#b16286",
-// 	"#689d6a",
-// 	"#a89984",
-// 	"#928374",
-// 	"#fb4934",
-// 	"#b8bb26",
-// 	"#fabd2f",
-// 	"#83a598",
-// 	"#d3869b",
-// 	"#8ec07c",
-// 	"#ebdbb2",
-// 	[255] = 0,
-// 	/* more colors can be added after 255 to use with DefaultXX */
-// 	"#8ec07c", /* 256 -> cursor */
-// 	"#555555", /* 257 -> rev cursor*/
-// 	"#282828", /* 258 -> bg */
-// 	"#ebdbb2", /* 259 -> fg */
-// };
-
-// Solarized
-// static const char *colorname[] = {
-// 	// "#073642", /* normal colors */
-// 	// "#1D2223",
-// 	"#002b36",
-// 	// "#dc322f",
-// 	"#CB4B16",
-// 	"#859900",
-// 	"#b58900",
-// 	"#268bd2",
-// 	"#d33682",
-// 	"#2aa198",
-// 	"#839496",
-// 	"#5A696A", /* bright colors */
-// 	"#cb4b16",
-// 	"#859900",
-// 	"#b58900",
-// 	"#268bd2",
-// 	"#d33682",
-// 	"#2aa198",
-// 	"#a3b4b6",
-// 	[255] = 0,
-// 	/* more colors can be added after 255 to use with DefaultXX */
-// 	"#839496", /* 256 -> cursor */
-// 	"#000000", /* 257 -> rev cursor*/
-// 	"#002b36", /* 258 -> bg */
-// 	// "#1C2122", /* 258 -> bg */
-// 	"#839496", /* 259 -> fg */
-// };
-
-
-// jellybeans
-// static const char *colorname[] = {
-// 	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-// 	"#cf6a4c",
-// 	"#799d6a",
-// 	"#ffb964",
-// 	"#8fbfdc",
-// 	"#c6b6ee",
-// 	"#458588",
-// 	"#b8b8a3",
-// 	"#928374", /* hard contrast: #1d2021 / soft contrast: #32302f */
-// 	"#cf6a4c",
-// 	"#799d6a",
-// 	"#ffb964",
-// 	"#8fbfdc",
-// 	"#c6b6ee",
-// 	"#458588",
-// 	"#e8e8d3",
-// 	[255] = 0,
-// 	/* more colors can be added after 255 to use with DefaultXX */
-// 	"#8ec07c", /* 256 -> cursor */
-// 	"#555555", /* 257 -> rev cursor*/
-// 	"#282828", /* 258 -> bg */
-// 	"#e8e8d3", /* 259 -> fg */
-// };
 
 /*
  * Default colors (colorname index)
@@ -247,7 +164,7 @@ static unsigned int cursorshape = 1;
  */
 
 static unsigned int cols = 140;
-static unsigned int rows = 38;
+static unsigned int rows = 37;
 
 /*
  * Default colour and shape of the mouse cursor
