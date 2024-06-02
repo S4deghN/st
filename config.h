@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Iosevka-14:antialias=true:autohint=true";
-static char *font2[] = {"NotoColorEmoji-14:antialias=true:autohint=true"};
+static char *font = "Ubuntu Mono-14:antialias=true:autohint=true";
+static char *font2[] = {"Symbols Nerd Font Mono-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
 /*
@@ -54,8 +54,8 @@ int allowwindowops = 1;
  * near minlatency, but it waits longer for slow updates to avoid partial draw.
  * low minlatency will tear/flicker more, as it can "detect" idle too early.
  */
-static double minlatency = 0;
-static double maxlatency = 3;
+static double minlatency = 1.666;
+static double maxlatency = 33.33;
 
 /*
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
@@ -104,40 +104,94 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 
 /* bg opacity */
 float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-// arc-green
+// // arc-green
+// static const char *colorname[] = {
+//     "#191919",
+//     "#CF6A4C",
+//     "#8F9D6A",
+//     "#CDA869",
+//     "#789AC0",
+//     "#b16286",
+//     "#68BEA2",
+//     "#6B7278",
+//     "#747C84",
+//     "#CF6A4C",
+//     "#87AF87",
+//     "#CDA869",
+//     "#789AC0",
+//     "#d3869b",
+//     "#5FAFAF",
+//     "#BCBCBC",
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#8ec07c", /* 256 -> cursor */
+//     "#555555", /* 257 -> rev cursor*/
+//     // "#1b1b1b", /* 258 -> bg */
+//     "#151515", /* 258 -> bg */
+//     // "#1a1a1a", /* 258 -> bg */
+//     // "#1E2223", /* 258 -> bg */
+//     // "#000000", /* 258 -> bg */
+//     "#9aa9aa", /* 259 -> fg */
+// };
+
+// oblivion
 static const char *colorname[] = {
-    "#191919",
-    "#CF6A4C",
-    "#8F9D6A",
-    "#CDA869",
-    "#789AC0",
-    "#b16286",
-    "#68BEA2",
-    "#6B7278",
-    "#747C84",
-    "#CF6A4C",
-    "#87AF87",
-    "#CDA869",
-    "#789AC0",
-    "#d3869b",
-    "#5FAFAF",
-    "#BCBCBC",
+    "#2E3436",
+    "#ff8800",
+    "#8AE234",
+    "#EDD400",
+    "#729FCF",
+    "#AD7FA8",
+    "#34E2E2",
+    "#a0a39d",
+    "#3f4446",
+    "#ff8800",
+    "#8AE234",
+    "#EDD400",
+    "#729FCF",
+    "#AD7FA8",
+    "#34E2E2",
+    "#D3D7CF",
     [255] = 0,
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#555555", /* 257 -> rev cursor*/
-    "#1a1a1a", /* 258 -> bg */
-    // "#1E2223", /* 258 -> bg */
-    // "#000000", /* 258 -> bg */
-    "#9aa9aa", /* 259 -> fg */
+    "#2E3436", /* 258 -> bg */
+    "#D3D7CF", /* 259 -> fg */
 };
+
+// ! Black
+// *color0:  #2E3436
+// *color8:  #555753
+// ! Red
+// *color1:  #CC0000
+// *color9:  #EF2929
+// ! Green
+// *color2:  #4E9A06
+// *color10: #8AE234
+// ! Yellow
+// *color3:  #C4A000
+// *color11: #FCE94F
+// ! Blue
+// *color4:  #3465A4
+// *color12: #729FCF
+// ! Purple
+// *color5:  #75507B
+// *color13: #AD7FA8
+// ! Cyan
+// *color6:  #06989A
+// *color14: #34E2E2
+// ! White
+// *color7:  #D3D7CF
+// *color15: #EEEEEC
+
 
 
 /*
@@ -190,39 +244,39 @@ static uint forcemousemod = ShiftMask;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",         STRING,  &font },
-		{ "fontalt0",     STRING,  &font2[0] },
-		{ "color0",       STRING,  &colorname[0] },
-		{ "color1",       STRING,  &colorname[1] },
-		{ "color2",       STRING,  &colorname[2] },
-		{ "color3",       STRING,  &colorname[3] },
-		{ "color4",       STRING,  &colorname[4] },
-		{ "color5",       STRING,  &colorname[5] },
-		{ "color6",       STRING,  &colorname[6] },
-		{ "color7",       STRING,  &colorname[7] },
-		{ "color8",       STRING,  &colorname[8] },
-		{ "color9",       STRING,  &colorname[9] },
-		{ "color10",      STRING,  &colorname[10] },
-		{ "color11",      STRING,  &colorname[11] },
-		{ "color12",      STRING,  &colorname[12] },
-		{ "color13",      STRING,  &colorname[13] },
-		{ "color14",      STRING,  &colorname[14] },
-		{ "color15",      STRING,  &colorname[15] },
-		{ "background",   STRING,  &colorname[258] },
-		{ "foreground",   STRING,  &colorname[259] },
-		{ "cursorColor",  STRING,  &colorname[256] },
+		// { "font",         STRING,  &font },
+		// { "fontalt0",     STRING,  &font2[0] },
+		// { "color0",       STRING,  &colorname[0] },
+		// { "color1",       STRING,  &colorname[1] },
+		// { "color2",       STRING,  &colorname[2] },
+		// { "color3",       STRING,  &colorname[3] },
+		// { "color4",       STRING,  &colorname[4] },
+		// { "color5",       STRING,  &colorname[5] },
+		// { "color6",       STRING,  &colorname[6] },
+		// { "color7",       STRING,  &colorname[7] },
+		// { "color8",       STRING,  &colorname[8] },
+		// { "color9",       STRING,  &colorname[9] },
+		// { "color10",      STRING,  &colorname[10] },
+		// { "color11",      STRING,  &colorname[11] },
+		// { "color12",      STRING,  &colorname[12] },
+		// { "color13",      STRING,  &colorname[13] },
+		// { "color14",      STRING,  &colorname[14] },
+		// { "color15",      STRING,  &colorname[15] },
+		// { "background",   STRING,  &colorname[258] },
+		// { "foreground",   STRING,  &colorname[259] },
+		// { "cursorColor",  STRING,  &colorname[256] },
 		{ "termname",     STRING,  &termname },
-		{ "shell",        STRING,  &shell },
-		{ "minlatency",   INTEGER, &minlatency },
-		{ "maxlatency",   INTEGER, &maxlatency },
-		{ "blinktimeout", INTEGER, &blinktimeout },
-		{ "bellvolume",   INTEGER, &bellvolume },
-		{ "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
-		{ "cwscale",      FLOAT,   &cwscale },
-		{ "chscale",      FLOAT,   &chscale },
-		{ "alpha",        FLOAT,   &alpha },
-		{ "alphaOffset",  FLOAT,   &alphaOffset },
+		// { "shell",        STRING,  &shell },
+		// { "minlatency",   INTEGER, &minlatency },
+		// { "maxlatency",   INTEGER, &maxlatency },
+		// { "blinktimeout", INTEGER, &blinktimeout },
+		// { "bellvolume",   INTEGER, &bellvolume },
+		// { "tabspaces",    INTEGER, &tabspaces },
+		// { "borderpx",     INTEGER, &borderpx },
+		// { "cwscale",      FLOAT,   &cwscale },
+		// { "chscale",      FLOAT,   &chscale },
+		// { "alpha",        FLOAT,   &alpha },
+		// { "alphaOffset",  FLOAT,   &alphaOffset },
 };
 
 /*
@@ -231,8 +285,8 @@ ResourcePref resources[] = {
  */
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 1} },
-	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 1} },
+	{ XK_NO_MOD,            Button4, kscrollup,      {.i = 3} },
+	{ XK_NO_MOD,            Button5, kscrolldown,    {.i = 3} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
@@ -271,40 +325,40 @@ static char *copyoutput[] = { "/bin/sh", "-c", "st-copyout", "externalpipe", NUL
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
-	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
-	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
-	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	// { ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
+	// { ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
+	// { XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
+	{ ControlMask,              XK_equal,         zoom,           {.f = +1} },
+	{ ControlMask,              XK_minus,        zoom,           {.f = -1} },
+	{ ControlMask,              XK_0,           zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
-	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
-	{ ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
-	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
-	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
-	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
-	{ MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
-	{ MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
-	{ MODKEY,               XK_u,           kscrollup,      {.i = -1} },
-	{ MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
-	{ MODKEY,		        XK_s,		    changealpha,	{.f = -0.05} },
-	{ MODKEY,		        XK_a,		    changealpha,	{.f = +0.05} },
-	{ TERMMOD,              XK_Up,          zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Down,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_K,           zoom,           {.f = +1} },
-	{ TERMMOD,              XK_J,           zoom,           {.f = -1} },
-	{ TERMMOD,              XK_U,           zoom,           {.f = +2} },
-	{ TERMMOD,              XK_D,           zoom,           {.f = -2} },
-	{ MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
-	{ MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
+	// { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
+	// { ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
+	// { MODKEY,               XK_v,           clippaste,      {.i =  0} },
+	// { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
+	// { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	// { ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
+	// { ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	// { MODKEY,               XK_Page_Up,     kscrollup,      {.i = -1} },
+	// { MODKEY,               XK_Page_Down,   kscrolldown,    {.i = -1} },
+	// { MODKEY,               XK_k,           kscrollup,      {.i =  1} },
+	// { MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
+	// { MODKEY,               XK_Up,          kscrollup,      {.i =  1} },
+	// { MODKEY,               XK_Down,        kscrolldown,    {.i =  1} },
+	// { MODKEY,               XK_u,           kscrollup,      {.i = -1} },
+	// { MODKEY,               XK_d,           kscrolldown,    {.i = -1} },
+	{ MODKEY,		        XK_equal,		    changealpha,	{.f = +0.025} },
+	{ MODKEY,		        XK_minus,		    changealpha,	{.f = -0.025} },
+	// { TERMMOD,              XK_Up,          zoom,           {.f = +1} },
+	// { TERMMOD,              XK_Down,        zoom,           {.f = -1} },
+	// { TERMMOD,              XK_K,           zoom,           {.f = +1} },
+	// { TERMMOD,              XK_J,           zoom,           {.f = -1} },
+	// { TERMMOD,              XK_U,           zoom,           {.f = +2} },
+	// { TERMMOD,              XK_D,           zoom,           {.f = -2} },
+	// { MODKEY,               XK_l,           externalpipe,   {.v = openurlcmd } },
+	// { MODKEY,               XK_y,           externalpipe,   {.v = copyurlcmd } },
+	// { MODKEY,               XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*
