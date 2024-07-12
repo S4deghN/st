@@ -111,61 +111,61 @@ float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
-// // arc-green
-// static const char *colorname[] = {
-//     "#191919",
-//     "#CF6A4C",
-//     "#8F9D6A",
-//     "#CDA869",
-//     "#789AC0",
-//     "#b16286",
-//     "#68BEA2",
-//     "#6B7278",
-//     "#747C84",
-//     "#CF6A4C",
-//     "#87AF87",
-//     "#CDA869",
-//     "#789AC0",
-//     "#d3869b",
-//     "#5FAFAF",
-//     "#BCBCBC",
-//     [255] = 0,
-//     /* more colors can be added after 255 to use with DefaultXX */
-//     "#8ec07c", /* 256 -> cursor */
-//     "#555555", /* 257 -> rev cursor*/
-//     // "#1b1b1b", /* 258 -> bg */
-//     "#151515", /* 258 -> bg */
-//     // "#1a1a1a", /* 258 -> bg */
-//     // "#1E2223", /* 258 -> bg */
-//     // "#000000", /* 258 -> bg */
-//     "#9aa9aa", /* 259 -> fg */
-// };
-
-// oblivion
+// arc-green
 static const char *colorname[] = {
-    "#2E3436",
-    "#ff8800",
-    "#8AE234",
-    "#EDD400",
-    "#729FCF",
-    "#AD7FA8",
-    "#34E2E2",
-    "#a0a39d",
-    "#606566",
-    "#ff8800",
-    "#8AE234",
-    "#EDD400",
-    "#729FCF",
-    "#AD7FA8",
-    "#34E2E2",
-    "#D3D7CF",
+    "#191919",
+    "#CF6A4C",
+    "#8F9D6A",
+    "#CDA869",
+    "#789AC0",
+    "#b16286",
+    "#68BEA2",
+    "#6B7278",
+    "#747C84",
+    "#CF6A4C",
+    "#87AF87",
+    "#CDA869",
+    "#789AC0",
+    "#d3869b",
+    "#5FAFAF",
+    "#BCBCBC",
     [255] = 0,
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#555555", /* 257 -> rev cursor*/
-    "#2E3436", /* 258 -> bg */
-    "#D3D7CF", /* 259 -> fg */
+    // "#1b1b1b", /* 258 -> bg */
+    "#151515", /* 258 -> bg */
+    // "#1a1a1a", /* 258 -> bg */
+    // "#1E2223", /* 258 -> bg */
+    // "#000000", /* 258 -> bg */
+    "#9aa9aa", /* 259 -> fg */
 };
+
+// // oblivion
+// static const char *colorname[] = {
+//     "#2E3436",
+//     "#ff8800",
+//     "#8AE234",
+//     "#EDD400",
+//     "#729FCF",
+//     "#AD7FA8",
+//     "#34E2E2",
+//     "#a0a39d",
+//     "#606566",
+//     "#ff8800",
+//     "#8AE234",
+//     "#EDD400",
+//     "#729FCF",
+//     "#AD7FA8",
+//     "#34E2E2",
+//     "#D3D7CF",
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#8ec07c", /* 256 -> cursor */
+//     "#555555", /* 257 -> rev cursor*/
+//     "#2E3436", /* 258 -> bg */
+//     "#D3D7CF", /* 259 -> fg */
+// };
 
 // ! Black
 // *color0:  #2E3436
