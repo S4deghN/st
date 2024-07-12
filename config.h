@@ -111,6 +111,17 @@ float alpha = 1.0;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
+/*
+ * Default colors (colorname index)
+ * foreground, background, cursor, reverse cursor
+ */
+unsigned int defaultbg = 258;
+unsigned int defaultcs = 256;
+unsigned int defaultrcs = 257;
+unsigned int background = 258;
+unsigned int defaultfg = 259;
+
+
 // arc-green
 static const char *colorname[] = {
     "#191919",
@@ -219,16 +230,6 @@ static const char *colorname[] = {
 //     "#d1b897", /* 259 -> fg */
 // };
 
-
-/*
- * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
- */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
-unsigned int defaultrcs = 257;
-unsigned int background = 258;
 
 /*
  * Default shape of cursor
