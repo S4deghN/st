@@ -149,7 +149,7 @@ static const char *colorname[] = {
     // "#1a1a1a", /* 258 -> bg */
     // "#1E2223", /* 258 -> bg */
     // "#000000", /* 258 -> bg */
-    "#b2bbbb", /* 259 -> fg */
+    "#a2aaaa", /* 259 -> fg */
 };
 
 // // oblivion
