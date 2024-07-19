@@ -121,6 +121,32 @@ unsigned int defaultrcs = 257;
 unsigned int background = 258;
 unsigned int defaultfg = 259;
 
+///* Terminal colors (16 first used in escape sequence) */
+//static const char *colorname[] = {
+//    /* solarized dark */
+//    "#073642",  /*  0: black    */
+//    "#ff8800",  /*  1: red      */
+//    "#859900",  /*  2: green    */
+//    "#b58900",  /*  3: yellow   */
+//    "#268bd2",  /*  4: blue     */
+//    "#d33682",  /*  5: magenta  */
+//    "#2aa198",  /*  6: cyan     */
+//    "#a3b4b6",  /*  7: white    */
+//    "#073642",  /*  8: brblack  */
+//    "#ff8800",  /*  9: brred    */
+//    "#859900",  /* 10: brgreen  */
+//    "#b58900",  /* 11: bryellow */
+//    "#268bd2",  /* 12: brblue   */
+//    "#d33682",  /* 13: brmagenta*/
+//    "#2aa198",  /* 14: brcyan   */
+//    "#a3b4b6",  /* 15: brwhite  */
+//    [255] = 0,
+//    /* more colors can be added after 255 to use with DefaultXX */
+//    "#93a1a1", /* 256 -> cursor */
+//    "#fdf6e3", /* 257 -> rev cursor*/
+//    "#00171c", /* 258 -> bg */
+//    "#839496", /* 259 -> fg */
+//};
 
 // arc-green
 static const char *colorname[] = {
@@ -144,11 +170,7 @@ static const char *colorname[] = {
     /* more colors can be added after 255 to use with DefaultXX */
     "#8ec07c", /* 256 -> cursor */
     "#1c2619", /* 257 -> rev cursor*/
-    // "#1b1b1b", /* 258 -> bg */
     "#242424", /* 258 -> bg */
-    // "#1a1a1a", /* 258 -> bg */
-    // "#1E2223", /* 258 -> bg */
-    // "#000000", /* 258 -> bg */
     "#a2aaaa", /* 259 -> fg */
 };
 
