@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono-14:antialias=true:autohint=true";
+static char *font = "Iosevka-12:antialias=true:autohint=true";
 static char *font2[] = {"Noto Color Emoji-14:antialias=true:autohint=true"};
 static int borderpx = 0;
 
