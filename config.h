@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Ubuntu Mono-14:antialias=true:autohint=true";
+static char *font = "UbuntuMono Nerd Font-14:antialias=true:autohint=true";
 static char *font2[] = {"Noto Color Emoji-12:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -168,7 +168,8 @@ static const char *colorname[] = {
     "#BCBCBC",
     [255] = 0,
     /* more colors can be added after 255 to use with DefaultXX */
-    "#8ec07c", /* 256 -> cursor */
+    // "#8ec07c", /* 256 -> cursor */
+    "#8eff7c", /* 256 -> cursor */
     "#1c2619", /* 257 -> rev cursor*/
     "#242424", /* 258 -> bg */
     // "#a2aaaa", /* 259 -> fg */
