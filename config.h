@@ -181,7 +181,7 @@ unsigned int defaultfg = 259;
 // arc-green
 static const char *colorname[] = {
     "#191919",
-    "#dF6A4C",
+    "#CF6A4C",
     "#8F9D6A",
     "#CDA869",
     "#789AC0",
@@ -189,7 +189,7 @@ static const char *colorname[] = {
     "#68BEA2",
     "#6B7278",
     "#747C84",
-    "#dF6A4C",
+    "#CF6A4C",
     "#87AF87",
     "#CDA869",
     "#789AC0",
