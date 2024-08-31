@@ -121,6 +121,36 @@ unsigned int defaultrcs = 257;
 unsigned int background = 258;
 unsigned int defaultfg = 259;
 
+
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+// 	/* 8 normal colors */
+// 	"gray10",
+//     "#d08f20",
+// 	"green3",
+// 	"yellow3",
+//     "#2090f0",
+// 	"magenta3",
+// 	"cyan3",
+// 	"gray60",
+// 	/* 8 bright colors */
+// 	"gray50",
+// 	"red2",
+// 	"green3",
+// 	"yellow3",
+//     "#2090f0",
+// 	"magenta",
+// 	"cyan",
+// 	"gray90",
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+//     "green3",
+// 	"#555555",
+// 	"#0c0c0c", /* default background colour */
+//     "#90B080", /* default foreground colour */
+// };
+
+
 ///* Terminal colors (16 first used in escape sequence) */
 //static const char *colorname[] = {
 //    /* solarized dark */
@@ -151,7 +181,7 @@ unsigned int defaultfg = 259;
 // arc-green
 static const char *colorname[] = {
     "#191919",
-    "#CF6A4C",
+    "#dF6A4C",
     "#8F9D6A",
     "#CDA869",
     "#789AC0",
@@ -159,7 +189,7 @@ static const char *colorname[] = {
     "#68BEA2",
     "#6B7278",
     "#747C84",
-    "#CF6A4C",
+    "#dF6A4C",
     "#87AF87",
     "#CDA869",
     "#789AC0",
@@ -169,12 +199,39 @@ static const char *colorname[] = {
     [255] = 0,
     /* more colors can be added after 255 to use with DefaultXX */
     // "#8ec07c", /* 256 -> cursor */
-    "#8eff7c", /* 256 -> cursor */
+    // "#8eff7c", /* 256 -> cursor */
+    "#50ff30", /* 256 -> cursor */
     "#1c2619", /* 257 -> rev cursor*/
-    "#242424", /* 258 -> bg */
+    "#202020", /* 258 -> bg */
     // "#a2aaaa", /* 259 -> fg */
     "#a7afaf", /* 259 -> fg */
 };
+
+// // 4coder
+// static const char *colorname[] = {
+//     "#191919",
+//     "#d08f20",
+//     "#50cc30",
+//     "#BABA00",
+//     "#2090f0",
+//     "#b16286",
+//     "#68BEA2",
+//     "#6B7278",
+//     "#747C84",
+//     "#d08f20",
+//     "#50cc30",
+//     "#BABA00",
+//     "#2090f0",
+//     "#d3869b",
+//     "#5FAFAF",
+//     "#BCBCBC",
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#50ff30", /* 256 -> cursor */
+//     "#1c2619", /* 257 -> rev cursor*/
+//     "#0C0C0C", /* 258 -> bg */
+//     "#839f90", /* 259 -> fg */
+// };
 
 // // oblivion
 // static const char *colorname[] = {
