@@ -207,6 +207,33 @@ unsigned int defaultfg = 259;
 //     "#a7afaf", /* 259 -> fg */
 // };
 
+// gruber
+static const char *colorname[] = {
+    "#242424",   /*  0: black    */
+    "#ff5f5f",   /*  1: red      */
+    "#87d75f",   /*  2: green    */
+    "#ffdd33",   /*  3: yellow   */
+    "#88aacc",   /*  4: blue     */
+    "#d3869b",   /*  5: magenta  */
+    "#95a99f",   /*  6: cyan     */
+    "#888888",   /*  7: white    */
+    "#777777",   /*  8: brblack  */
+    "#ff5f5f",   /*  9: brred    */
+    "#87d75f",   /* 10: brgreen  */
+    "#ffdd33",   /* 11: bryellow */
+    "#88aacc",   /* 12: brblue   */
+    "#d3869b",   /* 13: brmagenta*/
+    "#95a99f",   /* 14: brcyan   */
+    "#cfcfcf",   /* 15: brwhite  */
+    [255] = 0,
+    /* more colors can be added after 255 to use with DefaultXX */
+    // "#8ec07c", /* 256 -> cursor */
+    "#8eff7c", /* 256 -> cursor */
+    "#1c2619", /* 257 -> rev cursor*/
+    "#32302F", /* 258 -> bg */
+    "#cfcfcf", /* 259 -> fg */
+};
+
 // // 4coder
 // static const char *colorname[] = {
 //     "#191919",
@@ -311,36 +338,36 @@ unsigned int defaultfg = 259;
 //     "#d1b897", /* 259 -> fg */
 // };
 
-/* Terminal colors (16 first used in escape sequence) */
-static const char *colorname[] = {
-    /* 8 normal colors */
-    [0] = "#202020", /* black   */
-    [1] = "#fb4f3a", /* red     */
-    [2] = "#b8bb26", /* green   */
-    [3] = "#fabd2f", /* yellow  */
-    [4] = "#83a598", /* blue    */
-    [5] = "#d3869b", /* magenta */
-    [6] = "#8ec07c", /* cyan    */
-    [7] = "#c8b9a4", /* white   */
-    /* 8 bright colors */
-    [8]  = "#6C6866", /* black   */
-    [9]  = "#fb4f3a", /* red     */
-    [10] = "#b8bb26", /* green   */
-    [11] = "#fabd2f", /* yellow  */
-    [12] = "#83a598", /* blue    */
-    [13] = "#d3869b", /* magenta */
-    [14] = "#8ec07c", /* cyan    */
-    [15] = "#e1e0d9", /* white   */
-    [255] = 0,
-    /* more colors can be added after 255 to use with DefaultXX */
-    // "#8ec07c", /* 256 -> cursor */
-    [256] = "#8eff7c", /* 256 -> cursor */
-    [257] = "#1c2619", /* 257 -> rev cursor*/
-    // [258] = "#282828", /* 258 -> bg */
-    [258] = "#32302f", /* 258 -> bg */
-    [259] = "#d8cfba", /* 259 -> fg */
-    // [259] = "#C1C0B9", /* 259 -> fg */
-};
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+//     /* 8 normal colors */
+//     [0] = "#202020", /* black   */
+//     [1] = "#fb4f3a", /* red     */
+//     [2] = "#b8bb26", /* green   */
+//     [3] = "#fabd2f", /* yellow  */
+//     [4] = "#83a598", /* blue    */
+//     [5] = "#d3869b", /* magenta */
+//     [6] = "#8ec07c", /* cyan    */
+//     [7] = "#c8b9a4", /* white   */
+//     /* 8 bright colors */
+//     [8]  = "#6C6866", /* black   */
+//     [9]  = "#fb4f3a", /* red     */
+//     [10] = "#b8bb26", /* green   */
+//     [11] = "#fabd2f", /* yellow  */
+//     [12] = "#83a598", /* blue    */
+//     [13] = "#d3869b", /* magenta */
+//     [14] = "#8ec07c", /* cyan    */
+//     [15] = "#e1e0d9", /* white   */
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     // "#8ec07c", /* 256 -> cursor */
+//     [256] = "#8eff7c", /* 256 -> cursor */
+//     [257] = "#1c2619", /* 257 -> rev cursor*/
+//     // [258] = "#282828", /* 258 -> bg */
+//     [258] = "#32302f", /* 258 -> bg */
+//     [259] = "#d8cfba", /* 259 -> fg */
+//     // [259] = "#C1C0B9", /* 259 -> fg */
+// };
 
 
 
