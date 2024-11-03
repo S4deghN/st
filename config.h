@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fantasque sans mono-14:antialias=true:autohint=true";
+static char *font = "Inconsolata-15:antialias=true:autohint=true";
 static char *font2[] = {"Noto Color Emoji-12:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -207,31 +207,56 @@ unsigned int defaultfg = 259;
 //     "#a7afaf", /* 259 -> fg */
 // };
 
-// gruber
+// // gruber
+// static const char *colorname[] = {
+//     "#242424",   /*  0: black    */
+//     "#ff5f5f",   /*  1: red      */
+//     "#87d75f",   /*  2: green    */
+//     "#ffdd33",   /*  3: yellow   */
+//     "#88aacc",   /*  4: blue     */
+//     "#d3869b",   /*  5: magenta  */
+//     "#95a99f",   /*  6: cyan     */
+//     "#888888",   /*  7: white    */
+//     "#777777",   /*  8: brblack  */
+//     "#ff5f5f",   /*  9: brred    */
+//     "#87d75f",   /* 10: brgreen  */
+//     "#ffdd33",   /* 11: bryellow */
+//     "#88aacc",   /* 12: brblue   */
+//     "#d3869b",   /* 13: brmagenta*/
+//     "#95a99f",   /* 14: brcyan   */
+//     "#cfcfcf",   /* 15: brwhite  */
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#50ff30", /* 256 -> cursor */
+//     "#1c2619", /* 257 -> rev cursor*/
+//     "#32302F", /* 258 -> bg */
+//     "#cfcfcf", /* 259 -> fg */
+// };
+
+// handy
 static const char *colorname[] = {
-    "#242424",   /*  0: black    */
-    "#ff5f5f",   /*  1: red      */
-    "#87d75f",   /*  2: green    */
-    "#ffdd33",   /*  3: yellow   */
-    "#88aacc",   /*  4: blue     */
-    "#d3869b",   /*  5: magenta  */
-    "#95a99f",   /*  6: cyan     */
-    "#888888",   /*  7: white    */
-    "#777777",   /*  8: brblack  */
-    "#ff5f5f",   /*  9: brred    */
-    "#87d75f",   /* 10: brgreen  */
-    "#ffdd33",   /* 11: bryellow */
-    "#88aacc",   /* 12: brblue   */
-    "#d3869b",   /* 13: brmagenta*/
-    "#95a99f",   /* 14: brcyan   */
-    "#cfcfcf",   /* 15: brwhite  */
-    [255] = 0,
-    /* more colors can be added after 255 to use with DefaultXX */
-    // "#8ec07c", /* 256 -> cursor */
-    "#8eff7c", /* 256 -> cursor */
-    "#1c2619", /* 257 -> rev cursor*/
-    "#32302F", /* 258 -> bg */
-    "#cfcfcf", /* 259 -> fg */
+	"#202020",   /*  0: black    */
+	"#ff5f5f",   /*  1: red      */
+	"#6B9D23",   /*  2: green    */
+	"#D9A420",   /*  3: yellow   */
+	"#88aacc",   /*  4: blue     */
+	"#d3869b",   /*  5: magenta  */
+	"#95a99f",   /*  6: cyan     */
+	"#8A8581",   /*  7: white    */
+	"#777777",   /*  8: brblack  */
+	"#ff5f5f",   /*  9: brred    */
+	"#6B9D23",   /* 10: brgreen  */
+	"#D9A420",   /* 11: bryellow */
+	"#88aacc",   /* 12: brblue   */
+	"#d3869b",   /* 13: brmagenta*/
+	"#95a99f",   /* 14: brcyan   */
+	"#cccdce",   /* 15: brwhite  */
+	[255] = 0,
+	/* more colors can be added after 255 to use with DefaultXX */
+	"#50ff30", /* 256 -> cursor */
+	"#1c2619", /* 257 -> rev cursor*/
+	"#282828", /* 258 -> bg */
+	"#cccdce", /* 259 -> fg */
 };
 
 // // 4coder
@@ -798,4 +823,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
