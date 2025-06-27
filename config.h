@@ -5,7 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Inconsolata-15:antialias=true:autohint=true";
+// static char *font = "liberation mono-14:antialias=true:autohint=true";
+static char *font = "SF mono:size=13.5:antialias=true:autohint=true";
+// static char *font = "Ubuntu mono-16:antialias=true:autohint=true";
 static char *font2[] = {"Noto Color Emoji-12:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -27,8 +29,8 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
+static float cwscale = 1.00;
+static float chscale = 1.00;
 
 /*
  * word delimiter string
@@ -151,32 +153,32 @@ unsigned int defaultfg = 259;
 // };
 
 
-///* Terminal colors (16 first used in escape sequence) */
-//static const char *colorname[] = {
-//    /* solarized dark */
-//    "#073642",  /*  0: black    */
-//    "#ff8800",  /*  1: red      */
-//    "#859900",  /*  2: green    */
-//    "#b58900",  /*  3: yellow   */
-//    "#268bd2",  /*  4: blue     */
-//    "#d33682",  /*  5: magenta  */
-//    "#2aa198",  /*  6: cyan     */
-//    "#a3b4b6",  /*  7: white    */
-//    "#073642",  /*  8: brblack  */
-//    "#ff8800",  /*  9: brred    */
-//    "#859900",  /* 10: brgreen  */
-//    "#b58900",  /* 11: bryellow */
-//    "#268bd2",  /* 12: brblue   */
-//    "#d33682",  /* 13: brmagenta*/
-//    "#2aa198",  /* 14: brcyan   */
-//    "#a3b4b6",  /* 15: brwhite  */
-//    [255] = 0,
-//    /* more colors can be added after 255 to use with DefaultXX */
-//    "#93a1a1", /* 256 -> cursor */
-//    "#fdf6e3", /* 257 -> rev cursor*/
-//    "#00171c", /* 258 -> bg */
-//    "#839496", /* 259 -> fg */
-//};
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+//     /* solarized dark */
+//     "#073642",  /*  0: black    */
+//     "#ff8800",  /*  1: red      */
+//     "#859900",  /*  2: green    */
+//     "#b58900",  /*  3: yellow   */
+//     "#268bd2",  /*  4: blue     */
+//     "#d33682",  /*  5: magenta  */
+//     "#2aa198",  /*  6: cyan     */
+//     "#a3b4b6",  /*  7: white    */
+//     "#073642",  /*  8: brblack  */
+//     "#ff8800",  /*  9: brred    */
+//     "#859900",  /* 10: brgreen  */
+//     "#b58900",  /* 11: bryellow */
+//     "#268bd2",  /* 12: brblue   */
+//     "#d33682",  /* 13: brmagenta*/
+//     "#2aa198",  /* 14: brcyan   */
+//     "#a3b4b6",  /* 15: brwhite  */
+//     [255] = 0,
+//     /* more colors can be added after 255 to use with DefaultXX */
+//     "#93a1a1", /* 256 -> cursor */
+//     "#fdf6e3", /* 257 -> rev cursor*/
+//     "#00171c", /* 258 -> bg */
+//     "#839496", /* 259 -> fg */
+// };
 
 // // arc-green
 // static const char *colorname[] = {
@@ -233,31 +235,57 @@ unsigned int defaultfg = 259;
 //     "#cfcfcf", /* 259 -> fg */
 // };
 
-// handy
-static const char *colorname[] = {
-	"#202020",   /*  0: black    */
-	"#ff5f5f",   /*  1: red      */
-	"#6B9D23",   /*  2: green    */
-	"#D9A420",   /*  3: yellow   */
-	"#88aacc",   /*  4: blue     */
-	"#d3869b",   /*  5: magenta  */
-	"#95a99f",   /*  6: cyan     */
-	"#8A8581",   /*  7: white    */
-	"#777777",   /*  8: brblack  */
-	"#ff5f5f",   /*  9: brred    */
-	"#6B9D23",   /* 10: brgreen  */
-	"#D9A420",   /* 11: bryellow */
-	"#88aacc",   /* 12: brblue   */
-	"#d3869b",   /* 13: brmagenta*/
-	"#95a99f",   /* 14: brcyan   */
-	"#cccdce",   /* 15: brwhite  */
-	[255] = 0,
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#50ff30", /* 256 -> cursor */
-	"#1c2619", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#cccdce", /* 259 -> fg */
-};
+// // handy
+// static const char *colorname[] = {
+// 	"#202020",   /*  0: black    */
+// 	"#ff5f5f",   /*  1: red      */
+// 	"#6B9D23",   /*  2: green    */
+// 	"#D9A420",   /*  3: yellow   */
+// 	"#88aacc",   /*  4: blue     */
+// 	"#d3869b",   /*  5: magenta  */
+// 	"#95a99f",   /*  6: cyan     */
+// 	"#8A8581",   /*  7: white    */
+// 	"#777777",   /*  8: brblack  */
+// 	"#ff5f5f",   /*  9: brred    */
+// 	"#6B9D23",   /* 10: brgreen  */
+// 	"#D9A420",   /* 11: bryellow */
+// 	"#88aacc",   /* 12: brblue   */
+// 	"#d3869b",   /* 13: brmagenta*/
+// 	"#95a99f",   /* 14: brcyan   */
+// 	"#cccdce",   /* 15: brwhite  */
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#50ff30", /* 256 -> cursor */
+// 	"#1c2619", /* 257 -> rev cursor*/
+// 	"#282828", /* 258 -> bg */
+// 	"#cccdce", /* 259 -> fg */
+// };
+
+// // handy
+// static const char *colorname[] = {
+// 	"#202020",   /*  0: black    */
+// 	"#ff5f5f",   /*  1: red      */
+// 	"#6B9D23",   /*  2: green    */
+// 	"#D9A420",   /*  3: yellow   */
+// 	"#88aacc",   /*  4: blue     */
+// 	"#d3869b",   /*  5: magenta  */
+// 	"#95a99f",   /*  6: cyan     */
+// 	"#8A8581",   /*  7: white    */
+// 	"#777777",   /*  8: brblack  */
+// 	"#ff5f5f",   /*  9: brred    */
+// 	"#6B9D23",   /* 10: brgreen  */
+// 	"#D9A420",   /* 11: bryellow */
+// 	"#88aacc",   /* 12: brblue   */
+// 	"#d3869b",   /* 13: brmagenta*/
+// 	"#95a99f",   /* 14: brcyan   */
+// 	"#cccdce",   /* 15: brwhite  */
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	"#50ff30", /* 256 -> cursor */
+// 	"#1c2619", /* 257 -> rev cursor*/
+// 	"#000000", /* 258 -> bg */
+// 	"#cccdce", /* 259 -> fg */
+// };
 
 // // 4coder
 // static const char *colorname[] = {
@@ -363,6 +391,7 @@ static const char *colorname[] = {
 //     "#d1b897", /* 259 -> fg */
 // };
 
+// // Gruvbox
 // /* Terminal colors (16 first used in escape sequence) */
 // static const char *colorname[] = {
 //     /* 8 normal colors */
@@ -383,16 +412,81 @@ static const char *colorname[] = {
 //     [13] = "#d3869b", /* magenta */
 //     [14] = "#8ec07c", /* cyan    */
 //     [15] = "#e1e0d9", /* white   */
+//     // [15] = "#dad1bf", /* white   */
 //     [255] = 0,
 //     /* more colors can be added after 255 to use with DefaultXX */
 //     // "#8ec07c", /* 256 -> cursor */
-//     [256] = "#8eff7c", /* 256 -> cursor */
+//     // [256] = "#8eff7c", /* 256 -> cursor */
+//     [256] = "#44FB3E", /* 256 -> cursor */
 //     [257] = "#1c2619", /* 257 -> rev cursor*/
-//     // [258] = "#282828", /* 258 -> bg */
-//     [258] = "#32302f", /* 258 -> bg */
-//     [259] = "#d8cfba", /* 259 -> fg */
+//     [258] = "#242424", /* 258 -> bg */
+//     // [258] = "#2d2c2b", /* 258 -> bg */
+//     [259] = "#dad1bf", /* 259 -> fg */
 //     // [259] = "#C1C0B9", /* 259 -> fg */
 // };
+
+// vim9
+/* Terminal colors (16 first used in escape sequence) */
+static const char *colorname[] = {
+    /* 8 normal colors */
+    [0] = "#202020", /* black   */
+    [1] = "#ff4444", /* red     */
+    [2] = "#6B9D23", /* green   */
+    [3] = "#EDB322", /* yellow  */
+    [4] = "#88aacc", /* blue    */
+    [5] = "#d3869b", /* magenta */
+    [6] = "#95a99f", /* cyan    */
+    [7] = "#8A8581", /* white   */
+    /* 8 bright colors */
+    [8]  = "#777777", /* black   */
+    [9]  = "#ff4444", /* red     */
+    [10] = "#6B9D23", /* green   */
+    [11] = "#EDB322", /* yellow  */
+    [12] = "#88aacc", /* blue    */
+    [13] = "#d3869b", /* magenta */
+    [14] = "#95a99f", /* cyan    */
+    [15] = "#dcddde", /* white   */
+    // [15] = "#dad1bf", /* white   */
+    [255] = 0,
+    /* more colors can be added after 255 to use with DefaultXX */
+    // "#8ec07c", /* 256 -> cursor */
+    // [256] = "#8eff7c", /* 256 -> cursor */
+    [256] = "#44FB3E", /* 256 -> cursor */
+    [257] = "#1c2619", /* 257 -> rev cursor*/
+    [258] = "#282828", /* 258 -> bg */
+    [259] = "#dcddde", /* 259 -> fg */
+};
+
+// // off
+// /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+// 	/* 8 normal colors */
+// 	[0] = "#202020", /* black   */
+// 	[1] = "#fb4f3a", /* red     */
+// 	[2] = "#6b9e23", /* green   */
+// 	[3] = "#DAA520", /* yellow  */
+// 	[4] = "#008EC4", /* blue    */
+// 	[5] = "#ee799f", /* magenta */
+// 	[6] = "#68BEA2", /* cyan    */
+// 	[7] = "#c8b9a4", /* white   */
+// 	/* 8 bright colors */
+// 	[8]  = "#6C6866", /* black   */
+// 	[9]  = "#fb4f3a", /* red     */
+// 	[10] = "#6b9e23", /* green   */
+// 	[11] = "#DAA520", /* yellow  */
+// 	[12] = "#008EC4", /* blue    */
+// 	[13] = "#ee799f", /* magenta */
+// 	[14] = "#68BEA2", /* cyan    */
+// 	[15] = "#e1e0d9", /* white   */
+// 	[255] = 0,
+// 	/* more colors can be added after 255 to use with DefaultXX */
+// 	[256] = "#44FB3E", /* 256 -> cursor */
+// 	[257] = "#1c2619", /* 257 -> rev cursor*/
+// 	[258] = "#161616", /* 258 -> bg */
+// 	[259] = "#b9b09B", /* 259 -> fg */
+// };
+
+
 
 
 
@@ -457,14 +551,14 @@ ResourcePref resources[] = {
 		// { "background",   STRING,  &colorname[258] },
 		// { "foreground",   STRING,  &colorname[259] },
 		// { "cursorColor",  STRING,  &colorname[256] },
-		{ "termname",     STRING,  &termname },
+		// { "termname",     STRING,  &termname },
 		// { "shell",        STRING,  &shell },
 		// { "minlatency",   INTEGER, &minlatency },
 		// { "maxlatency",   INTEGER, &maxlatency },
-		{ "blinktimeout", INTEGER, &blinktimeout },
+		// { "blinktimeout", INTEGER, &blinktimeout },
 		// { "bellvolume",   INTEGER, &bellvolume },
 		// { "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
+		// { "borderpx",     INTEGER, &borderpx },
 		// { "cwscale",      FLOAT,   &cwscale },
 		// { "chscale",      FLOAT,   &chscale },
 		// { "alpha",        FLOAT,   &alpha },
@@ -526,8 +620,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,             XK_0,           zoomreset,      {.f =  0} },
 	{ TERMMOD,                 XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,                 XK_V,           clippaste,      {.i =  0} },
+	{ ShiftMask,               XK_Insert,      clippaste,      {.i =  0} },
 	// { MODKEY,               XK_c,           clipcopy,       {.i =  0} },
-	// { ShiftMask,            XK_Insert,      clippaste,      {.i =  0} },
 	// { MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	// { ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	// { TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
