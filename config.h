@@ -6,8 +6,12 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 // static char *font = "liberation mono-14:antialias=true:autohint=true";
-static char *font = "SF mono:size=13.5:antialias=true:autohint=true";
-// static char *font = "Ubuntu mono-16:antialias=true:autohint=true";
+// static char *font = "iosevka:size=15:antialias=true:autohint=true";
+// static char *font = "Consolas:size=14:antialias=true:autohint=true";
+static char *font = "Consolas:size=15:antialias=true:autohint=true";
+// static char *font = "hack:size=14:antialias=true:autohint=true";
+// static char *font = "SF Mono-13.5:antialias=true:autohint=true";
+// static char *font = "source code pro-14:antialias=true:autohint=true";
 static char *font2[] = {"Noto Color Emoji-12:antialias=true:autohint=true"};
 static int borderpx = 0;
 
@@ -30,7 +34,10 @@ char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.00;
-static float chscale = 1.00;
+static float chscale = 1.0;
+/* Character rendering offsets in pixels */
+static short cxoffset = 0;
+static short cyoffset = 1;
 
 /*
  * word delimiter string
